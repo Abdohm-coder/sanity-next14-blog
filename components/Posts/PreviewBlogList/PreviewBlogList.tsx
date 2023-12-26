@@ -1,3 +1,4 @@
+"use client";
 import { useLiveQuery } from "next-sanity/preview";
 
 import Posts from "..";
