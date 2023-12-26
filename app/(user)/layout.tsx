@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Banner from "@/components/Banner";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +18,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <Header />
-        <main>{children}</main>
+        <main>
+          <Banner />
+          {children}
+        </main>
+        {/* <Suspense>
+            <VisualEditing />
+          </Suspense> */}
       </body>
     </html>
   );
